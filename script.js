@@ -83,7 +83,7 @@ function updatePositions(rotationX) {
 
 let rotationX = 0;
 function animate() {
-    rotationX += 0.015; // velocidad de rotación //
+    rotationX += 0.025; // velocidad de rotación //
     if (rotationX >= 360) rotationX -= 360;
     updatePositions(rotationX);
     requestAnimationFrame(animate);
