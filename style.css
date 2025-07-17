@@ -1,0 +1,118 @@
+body {
+    margin: 0;
+    background-color: #181818;
+    color: #f2f2f2;
+    font-family: "Oswald", sans-serif;
+    overflow: hidden;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 1500px;
+    position: relative;
+}
+
+.fixed-text {
+    position: fixed;
+    left: 120px;
+    top: 50%;
+    transform: translateY(-50%) rotate(-90deg);
+    transform-origin: center;
+    font-family: "Oswald", sans-serif;
+    color: #888888;
+    font-weight: 600;
+    font-size: 3rem;
+    text-transform: uppercase;
+    user-select: none;
+    white-space: nowrap;
+    z-index: 10;
+}
+
+@media (max-width: 900px) {
+    .fixed-text {
+        font-size: 2.5rem;
+        left: 90px;
+    }
+}
+
+@media (max-width: 480px) {
+    .fixed-text {
+        font-size: 1.8rem;
+        left: 60px;
+    }
+}
+
+.wheel-wrapper {
+    width: 800px;
+    height: 600px;
+    position: relative;
+    transform-style: preserve-3d;
+    transform: rotateY(10deg);
+    top: -40px;
+}
+
+.name-item {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-style: preserve-3d;
+    white-space: nowrap;
+    text-align: center;
+    backface-visibility: hidden;
+    transition: transform 0.3s, color 0.3s, opacity 0.3s;
+    font-family: "Oswald", sans-serif;
+}
+
+.name-item .nombre {
+    font-size: 1.81rem;
+    font-weight: 600;
+    color: inherit;
+}
+
+.name-item .info {
+    display: inline-block;
+    font-family: "Inconsolata", monospace;
+    font-size: 0.85rem;
+    margin-top: 0.1em;
+    color: inherit;
+}
+
+@media (max-width: 900px) {
+    body {
+        perspective: 1200px;
+    }
+
+    .wheel-wrapper {
+        width: 600px;
+        height: 450px;
+        top: -30px;
+    }
+
+    .name-item .nombre {
+        font-size: 1.4rem;
+    }
+
+    .name-item .info {
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        perspective: 900px;
+    }
+
+    .wheel-wrapper {
+        width: 320px;
+        height: 240px;
+        top: -20px;
+    }
+
+    .name-item .nombre {
+        font-size: 1rem;
+    }
+
+    .name-item .info {
+        font-size: 0.55rem;
+    }
+}
