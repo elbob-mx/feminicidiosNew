@@ -14,7 +14,7 @@ body {
 
 .fixed-text {
     position: fixed;
-    left: 120px;
+    left: 400px;
     top: 50%;
     transform: translateY(-50%) rotate(-90deg);
     transform-origin: center;
@@ -28,17 +28,24 @@ body {
     z-index: 10;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1366px) {
     .fixed-text {
-        font-size: 2.5rem;
-        left: 90px;
+        font-size: 3.5rem;
+        left: 150px;
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 900px) {
+    .fixed-text {
+        font-size: 2.5rem;
+        left: 60px;
+    }
+}
+
+@media (max-width: 430px) {
     .fixed-text {
         font-size: 1.8rem;
-        left: 60px;
+        left: 20px;
     }
 }
 
