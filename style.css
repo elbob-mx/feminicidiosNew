@@ -74,9 +74,11 @@ body {
     font-family: "Inconsolata", monospace;
     font-size: 0.85rem;
     margin-top: 0.1em;
+    /* reducido espacio en 33% */
     color: inherit;
 }
 
+/* Tablets */
 @media (max-width: 900px) {
     body {
         perspective: 1200px;
@@ -97,6 +99,7 @@ body {
     }
 }
 
+/* Celulares */
 @media (max-width: 480px) {
     body {
         perspective: 900px;
